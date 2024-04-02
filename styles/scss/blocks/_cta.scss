@@ -1,0 +1,29 @@
+.cta {
+  padding: 180px 0;
+  background-color: #999;
+  background-image: url("./../../images/cta/bg.jpg");
+  background-position: center center; /* x y */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cta__title {
+  margin-bottom: 17px;
+}
+
+.cta__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.cta__text {
+  line-height: 1.5;
+
+    p + p {
+        margin-top: 1em;
+    }
+}
+
+.cta__form {
+}
