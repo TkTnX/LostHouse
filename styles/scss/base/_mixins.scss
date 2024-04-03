@@ -1,0 +1,40 @@
+@mixin mediaTablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mediabigTablet {
+  @media (max-width: $bigTablet) {
+    @content;
+  }
+}
+@mixin mediaLaptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin decorNumberBefore {
+  position: absolute;
+  font-size: 400px;
+  opacity: 0.02;
+  font-weight: 700;
+  font-family: $font-accent;
+  right: calc(50% + 570px);
+  transform: translate(50%, 0%);
+  line-height: 1.15;
+  top: 0;
+  @content;
+}
+@mixin decorNumberAfter {
+  @content;
+  position: absolute;
+  font-size: 400px;
+  opacity: 0.02;
+  font-weight: 700;
+  font-family: $font-accent;
+  left: calc(50% + 680px);
+  transform: translate(-50%, 0%);
+  line-height: 1.15;
+  top: 0;
+}

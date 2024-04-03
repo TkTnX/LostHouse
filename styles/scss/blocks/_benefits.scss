@@ -1,5 +1,12 @@
 .benefits {
-  margin: 120px 0;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    @include decorNumberAfter {
+      content: "II";
+    }
+  }
 }
 
 .benefits__list {
@@ -7,6 +14,9 @@
   align-items: center;
   justify-content: center;
   gap: 70px;
+  @include mediaLaptop {
+    flex-wrap: wrap;
+  }
 }
 .benefits__item {
   display: grid;

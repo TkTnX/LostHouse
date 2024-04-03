@@ -1,0 +1,42 @@
+.footer {
+  background-color: #303840;
+  padding: 72px 0 51px;
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+  @include mediaLaptop {
+    padding: 36px 0 25px;
+  }
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  @include mediaLaptop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @include mediaTablet {
+    justify-content: center;
+  }
+}
+.footer__logo {
+  margin-top: -12px;
+}
+
+.footer__list {
+  display: grid;
+  gap: 15px;
+}
+
+.footer__socials {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer__email {
+  color: $accent;
+}

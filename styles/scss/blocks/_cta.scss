@@ -5,6 +5,9 @@
   background-position: center center; /* x y */
   background-size: cover;
   background-repeat: no-repeat;
+  @include mediaLaptop {
+    padding: 60px 0;
+  }
 }
 
 .cta__title {
@@ -15,15 +18,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  @include mediabigTablet {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .cta__text {
   line-height: 1.5;
+  @include mediaLaptop {
+    font-size: 14px;
+  }
 
-    p + p {
-        margin-top: 1em;
-    }
-}
-
-.cta__form {
+  p + p {
+    margin-top: 1em;
+  }
 }

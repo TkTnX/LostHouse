@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoftHouse</title>
     <link rel="stylesheet" href="./styles/css/main.css" />
+    <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css" />
   </head>
   <body>
     <header class="header">
@@ -35,6 +36,11 @@
                 </li>
               </ul>
             </nav>
+            <div class="header__nav-btn">
+              <button class="nav-icon-btn" id="navIconBtn">
+                <div class="nav-icon"></div>
+              </button>
+            </div>
           </div>
         </div>
         <div class="header__title">
@@ -174,7 +180,12 @@
 
             <form action="" class="cta__form form">
               <input class="form__input" type="text" placeholder="Ваше имя" />
-              <input class="form__input" type="tel" placeholder="Ваш телефон" />
+              <input
+                class="form__input"
+                data-tel-input
+                type="tel"
+                placeholder="Ваш телефон"
+              />
               <p class="form__privacy">
                 *Мы никому не передаем ваши данные. <br />
                 И не сохраняем ваш номер в базу.
@@ -184,6 +195,133 @@
           </div>
         </div>
       </section>
+
+      <section class="video">
+        <h2 class="visually-hidden">Видео Loft House</h2>
+        <div class="container">
+          <a
+            href="https://www.youtube.com/watch?v=bhJNL9JUsnY"
+            data-youtubeLightbox
+            class="video__link"
+          >
+            <img
+              src="./images/video/video.jpg"
+              alt="video"
+              class="video__img"
+            />
+            <img src="./images/video/play.svg" alt="play" class="video__icon" />
+          </a>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <div class="container">
+          <div class="map__title">
+            <h2 class="title-2">Район на карте</h2>
+          </div>
+          <div id="map" class="map"></div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__logo">
+            <div class="logo">
+              <img src="./images/logo.svg" alt="logo" />
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link">О комплексе</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Район</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Каталог квартир</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Ипотека</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Поселение и переезд</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Сервисные услуги</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Экологическая устойчивость</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Инвестиционные возможности</a>
+              </li>
+              <li class="footer__item">
+                <a href="#!" class="footer__link">Программа лояльности </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__address">
+            <ul class="footer__list">
+              <li>Адрес: Наб. реки Фонтанки 10-15</li>
+              <li>Телефон: <a href="tel:+78121234567">8 (812) 123-45-67</a></li>
+              <li>Отдел продаж: 10:00 - 20:00</li>
+              <li>
+                E-mail:
+                <a class="footer__email" href="mailto:vip@lofthouse.ru"
+                  >vip@lofthouse.ru</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__socials">
+              <li>
+                <a href="#!">
+                  <img src="./images/socials/youtube.svg" alt="youtube" />
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <img src="./images/socials/vk.svg" alt="vk" />
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <img src="./images/socials/facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  <img src="./images/socials/instagram.svg" alt="instagram" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="youtubelightbox" id="youtubelightbox">
+      <div class="youtubelightbox__centeredchild">
+        <div class="youtubelightbox__videowrapper">
+          <div id="youtubelightboxPlayer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=379572f8-0fb4-4b04-b69b-f16536c863e8&lang=ru_RU"></script>
+    <script src="./libs/phoneMask/mask.js"></script>
+    <script src="./libs/phoneMask/mask_list.js"></script>
+
+    <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

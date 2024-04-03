@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 35px 30px;
+  @include mediabigTablet {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .form__input {
@@ -23,6 +26,9 @@
   color: #e7e7e7;
   line-height: 1.23;
   text-align: center;
+  @include mediabigTablet {
+    grid-row: 4/5;
+  }
 }
 .form__btn {
   height: 50px;

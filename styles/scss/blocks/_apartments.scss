@@ -1,4 +1,10 @@
 .apartments {
+  position: relative;
+  &::before {
+    @include decorNumberBefore {
+      content: "III";
+    }
+  }
 }
 
 .apartments__title {
@@ -8,7 +14,15 @@
 .apartments__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  //   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+
   justify-content: center;
   gap: 30px;
+
+  @include mediabigTablet {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 80px;
+    .card {
+      justify-self: center;
+    }
+  }
 }
